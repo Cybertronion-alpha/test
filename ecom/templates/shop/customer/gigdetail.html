@@ -1,0 +1,14 @@
+{% extends 'account/base.html' %}
+{%  block content %}
+<p>{{gig_obj.title}}</p>
+<p>{{gig_obj.category}}</p>
+<p>{{gig_obj.description}}</p>
+<p>{{gig_obj.price}}</p>
+
+{% if user.is_authenticated %}
+<a class="btn btn-primary" href="{% url 'chat'  request.user.id  gig_obj.user.id %}">contact seller</a>
+{% else %}
+<p>login to contact seller</p>
+{% endif %}
+
+{% endblock %}  

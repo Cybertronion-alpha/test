@@ -1,0 +1,18 @@
+{% extends 'account/base.html' %}
+{% load static %}
+
+{% block content %}
+
+			
+{% for  cat in sub_cat %}
+<h4><a  href="{% url 'shop:gigsellerlist' main_cat.0.0 cat.slug  %}"> {{cat}}</a> </h4>
+{{main_cat.0.0}}
+{% endfor %}
+
+
+
+
+
+
+
+{% endblock %}

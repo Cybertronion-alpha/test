@@ -1,0 +1,6 @@
+{% extends 'account/base.html' %}
+{% block content %}
+{% for gigs in object_list %}
+<p><a href="{% url 'shop:seller_gigdetail' gigs.id %}">{{gigs.title}}</a></p>
+{% endfor %}
+{% endblock %}

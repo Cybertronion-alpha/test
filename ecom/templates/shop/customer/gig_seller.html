@@ -1,0 +1,15 @@
+{% extends 'account/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% for gig in obj %}
+<h4><a  href="{% url 'shop:gigdetail' main_cat.0.0  sub_cat.0.slug  gig.id%}"> {{gig}}</a> </h4>
+{% endfor %}
+
+{{sub_cat.0.slug}}
+
+
+
+
+{% endblock %}
